@@ -1,4 +1,3 @@
-// src/store/useStore.test.ts
 import { act } from "react";
 import { useStore } from "./useStore";
 
@@ -7,7 +6,6 @@ type Character = {
   height: string;
 };
 
-// Função para resetar a store antes de cada teste
 const resetStore = () => {
   const { setCharacters, setFavorites } = useStore.getState();
   act(() => {

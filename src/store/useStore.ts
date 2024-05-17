@@ -1,10 +1,8 @@
-// src/store/useStore.ts
 import { create } from "zustand";
 
 type Character = {
   name: string;
   height: string;
-  // Adicione outros campos conforme necessário
 };
 
 type State = {
