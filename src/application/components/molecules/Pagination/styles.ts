@@ -1,3 +1,4 @@
+import { colors } from "@components/styles/StyledComponents";
 import styled from "styled-components";
 
 export const PaginationContainer = styled.div`
@@ -8,7 +9,7 @@ export const PaginationContainer = styled.div`
 `;
 
 export const PaginationButton = styled.button`
-  background-color: #6200ea;
+  background-color: ${colors.primary};
   color: white;
   border: none;
   border-radius: 4px;

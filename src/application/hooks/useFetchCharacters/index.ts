@@ -1,6 +1,9 @@
+import { CharacterService } from "@domain/services/CharacterService";
+import swapiService from "@infrastructure/api/swapiService";
+import { useStore } from "@infrastructure/store/useStore";
 import { useEffect, useState } from "react";
-import swapiService from "../../services/swapi/swapiService";
-import { useStore } from "../../store/useStore";
+
+const characterService = new CharacterService(swapiService);
 
 export const useFetchCharacters = (page: number) => {
   const [loading, setLoading] = useState(false);
@@ -13,7 +16,7 @@ export const useFetchCharacters = (page: number) => {
     const fetchCharacters = async () => {
       setLoading(true);
       try {
-        const data = await swapiService.getCharacters(page);
+        const data = await characterService.getCharacters(page);
         setCharacters(data.results);
         setTotalPages(Math.ceil(data.count / PAGE_LENGTH));
         setLoading(false);

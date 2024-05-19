@@ -9,7 +9,6 @@ type PaginationProps = {
   onPageChange: (page: number) => void;
 };
 
-
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const handlePrevious = () => {
     if (currentPage > 1) {
@@ -25,11 +24,19 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   return (
     <PaginationContainer>
-      <PaginationButton onClick={handlePrevious} disabled={currentPage === 1}>
+      <PaginationButton
+        onClick={handlePrevious}
+        disabled={currentPage === 1}
+        aria-label="Previous page"
+      >
         <Icon path={mdiChevronLeft} size={1} />
       </PaginationButton>
       <PaginationInfo>{currentPage} / {totalPages}</PaginationInfo>
-      <PaginationButton onClick={handleNext} disabled={currentPage === totalPages}>
+      <PaginationButton
+        onClick={handleNext}
+        disabled={currentPage === totalPages}
+        aria-label="Next page"
+      >
         <Icon path={mdiChevronRight} size={1} />
       </PaginationButton>
     </PaginationContainer>

@@ -1,12 +1,13 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
 import CharacterCard from '../CharacterCard';
+import { useStore } from '@infrastructure/store/useStore';
+import { ContainerCards } from '@components/styles/StyledComponents';
 
 const CharacterList: React.FC = () => {
   const { characters, favorites } = useStore();
 
   return (
-    <div>
+    <ContainerCards>
       {characters.map((character) => (
         <CharacterCard
           key={character.name}
@@ -14,7 +15,7 @@ const CharacterList: React.FC = () => {
           isFavorite={favorites.some(fav => fav.name === character.name)}
         />
       ))}
-    </div>
+    </ContainerCards>
   );
 };
 
