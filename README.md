@@ -1,46 +1,107 @@
-# Getting Started with Create React App
+# Star Wars Characters App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação React que permite aos usuários listar, adicionar aos favoritos, remover dos favoritos e filtrar personagens de Star Wars utilizando dados da SWAPI. O foco do projeto é na qualidade do código, uso adequado das ferramentas do React, boas práticas de desenvolvimento e uma arquitetura bem estruturada utilizando DDD (Domain-Driven Design) e Atomic Design.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Listar personagens de Star Wars obtidos da SWAPI.
+- Exibir pelo menos o nome e a altura dos personagens.
+- Implementar paginação para a lista de personagens.
+- Adicionar personagens a uma lista de favoritos.
+- Armazenar os personagens favoritos no `localStorage`.
+- Remover personagens da lista de favoritos.
+- Filtrar a lista para mostrar todos os personagens ou apenas os favoritos.
+- Persistência dos favoritos entre recarregamentos da página.
+- Estilização esteticamente agradável e responsiva.
+- Tratamento de erros com mensagens exibidas via toast.
+- Testes unitários para componentes e hooks.
 
-### `npm start`
+## Arquitetura do Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Domain-Driven Design (DDD)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O DDD foi aplicado para garantir uma clara separação das responsabilidades e promover um código mais sustentável e escalável. A estrutura do projeto é dividida em camadas:
 
-### `npm test`
+- **Domain**: Contém as entidades de negócio, serviços de domínio e interfaces de repositórios. Esta camada não depende de outras camadas.
+  - `entities/`: Definições das entidades de domínio.
+  - `services/`: Lógica de negócios e operações de domínio.
+  - `repositories/`: Interfaces para os repositórios de dados.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Infrastructure**: Implementa os repositórios definidos no domínio e configurações de infraestrutura, como clientes HTTP (Axios).
+  - `api/`: Configurações e instâncias de clientes HTTP.
+  - `store/`: Estado global da aplicação utilizando Zustand.
 
-### `npm run build`
+- **Application**: Contém a lógica de aplicação que orquestra a interação entre as camadas de domínio e infraestrutura. Inclui componentes, hooks e contexto.
+  - `components/`: Componentes React organizados utilizando Atomic Design.
+  - `hooks/`: Hooks personalizados para lógica de estado e efeitos.
+  - `pages/`: Páginas da aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Atomic Design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O Atomic Design foi aplicado para organizar os componentes de forma modular e reutilizável. A estrutura é dividida em:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Atoms**: Componentes básicos e indivisíveis, como botões, inputs e ícones.
+- **Molecules**: Combinações simples de átomos que formam uma unidade funcional, como campos de formulários com label e input.
+- **Organisms**: Combinações mais complexas de moléculas e átomos que formam seções completas da interface, como formulários e listas de itens.
+- **Templates**: Estruturas de página que contêm organismos organizados para formar layouts completos.
+- **Pages**: Instâncias específicas de templates preenchidas com dados reais.
 
-### `npm run eject`
+## Estrutura de Diretórios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```plaintext
+src/
+|-- application/
+|   |-- components/
+|       |-- atoms/
+|       |-- molecules/
+|       |-- organisms/
+|   |-- hooks/
+|   |-- pages/
+|-- domain/
+|   |-- entities/
+|   |-- services/
+|   |-- repositories/
+|-- infrastructure/
+|   |-- api/
+|   |-- store/
+|-- index.tsx
+|-- App.tsx
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Clone o repositório:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+git clone 
+cd star-wars-characters-app
+````
 
-## Learn More
+Instale as dependências:
+```bash
+npm install
+````
+Inicie a aplicação:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scripts Disponíveis
+
+- npm start: Inicia a aplicação em modo de desenvolvimento;
+- npm run build: Compila a aplicação para produção na pasta build;
+- npm test: Executa os testes unitários;
+
+## Testes
+Os testes são escritos usando a biblioteca Testing Library e Jest. Para rodar os testes, utilize o comando:
+```bash
+npm test
+```
+## Contribuição
+Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request.
+
+## Observações
+- Melhorar cobertura de testes;
+- Adicionar busca por nome;
+
