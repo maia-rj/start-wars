@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@components/*": ["application/components/*"],
+      "@atoms/*": ["application/components/atoms/*"],
+      "@molecules/*": ["application/components/molecules/*"],
+      "@organisms/*": ["application/components/organisms/*"],
+      "@templates/*": ["application/components/templates/*"],
+      "@pages/*": ["application/pages/*"],
+      "@styles/*": ["application/styles/*"],
+      "@hooks/*": ["application/hooks/*"],
+      "@domain/*": ["domain/*"],
+      "@services/*": ["domain/services/*"],
+      "@repositories/*": ["domain/repositories/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@api/*": ["infrastructure/api/*"],
+      "@store/*": ["infrastructure/store/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
