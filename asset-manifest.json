@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/start-wars/static/js/main.f641b3cb.js",
-    "static/js/453.aa012a6e.chunk.js": "/start-wars/static/js/453.aa012a6e.chunk.js",
-    "static/media/logo.svg": "/start-wars/static/media/logo.4417c035ffdf2cb19a0bb063a24fb572.svg",
-    "index.html": "/start-wars/index.html",
-    "main.f641b3cb.js.map": "/start-wars/static/js/main.f641b3cb.js.map",
-    "453.aa012a6e.chunk.js.map": "/start-wars/static/js/453.aa012a6e.chunk.js.map"
+    "main.js": "/star-wars/static/js/main.b1e17d14.js",
+    "static/js/453.aa012a6e.chunk.js": "/star-wars/static/js/453.aa012a6e.chunk.js",
+    "static/media/logo.svg": "/star-wars/static/media/logo.4417c035ffdf2cb19a0bb063a24fb572.svg",
+    "index.html": "/star-wars/index.html",
+    "main.b1e17d14.js.map": "/star-wars/static/js/main.b1e17d14.js.map",
+    "453.aa012a6e.chunk.js.map": "/star-wars/static/js/453.aa012a6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f641b3cb.js"
+    "static/js/main.b1e17d14.js"
   ]
 }
