@@ -2,7 +2,7 @@
 
 Este projeto é uma aplicação React que permite aos usuários listar, adicionar aos favoritos, remover dos favoritos e filtrar personagens de Star Wars utilizando dados da SWAPI. O foco do projeto é na qualidade do código, uso adequado das ferramentas do React, boas práticas de desenvolvimento e uma arquitetura bem estruturada utilizando DDD (Domain-Driven Design) e Atomic Design.
 
-Acesse a versão em produção aqui: https://maia-rj.github.io/start-wars/
+Acesse a versão em produção aqui: https://maia-rj.github.io/star-wars/
 
 ## Funcionalidades
 

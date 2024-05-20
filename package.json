@@ -1,6 +1,6 @@
 {
   "name": "star-wars-app",
-  "homepage":"https://maia-rj.github.io/start-wars/",
+  "homepage":"https://maia-rj.github.io/star-wars/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
