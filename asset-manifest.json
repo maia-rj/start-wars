@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/start-wars/static/js/main.f641b3cb.js",
+    "static/js/453.aa012a6e.chunk.js": "/start-wars/static/js/453.aa012a6e.chunk.js",
+    "static/media/logo.svg": "/start-wars/static/media/logo.4417c035ffdf2cb19a0bb063a24fb572.svg",
+    "index.html": "/start-wars/index.html",
+    "main.f641b3cb.js.map": "/start-wars/static/js/main.f641b3cb.js.map",
+    "453.aa012a6e.chunk.js.map": "/start-wars/static/js/453.aa012a6e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f641b3cb.js"
+  ]
+}
